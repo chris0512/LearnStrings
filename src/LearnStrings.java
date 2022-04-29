@@ -1,12 +1,16 @@
 public class LearnStrings {
     public static void main(String[] args) {
-        String myText = "for";
-        String secondText = "score";
-        StringBuilder builder = new StringBuilder(myText.length() + secondText.length())
-                .append(myText)
-                .append(secondText);
+       String myText = "apple";
+        String firstPart = myText.substring(0, 1);
+        String secondPart = myText.substring(1);
+        String capitalFirstLetter = firstPart.toUpperCase();
+        int capacity = capitalFirstLetter.length() + secondPart.length();
+        String myNewText = new StringBuilder(capacity)
+                .append(capitalFirstLetter)
+                .append(secondPart)
+                .toString();
 
-        System.out.println(builder.toString());
+       System.out.println(myNewText);
 
     }
 
